@@ -1,0 +1,1142 @@
+/**
+ * referenceDictionaries.js
+ * 
+ * Official reference dictionaries extracted directly from YÖK templates.
+ */
+
+// 226 Countries for Hareketlilik
+const HAREKETLILIK_COUNTRIES = Object.freeze([
+  "ADIGE CUM.",
+  "AFGANİSTAN",
+  "ALMANYA",
+  "ALTAY CUM.",
+  "AMERİKA",
+  "ANDORRA",
+  "ANGOLA CUMHURİYETİ",
+  "ANTİGUA VE BARBUDA",
+  "ARJANTİN",
+  "ARNAVUTLUK",
+  "AVUSTRALYA",
+  "AVUSTURYA",
+  "AZERBAYCAN",
+  "BAHAMALAR",
+  "BAHREYN",
+  "BANGLADEŞ",
+  "BARBADOS",
+  "BELARUS",
+  "BELÇİKA",
+  "BELİZE",
+  "BENİN",
+  "BİRLEŞİK ARAP EMİRLİKLERİ",
+  "BİRLEŞİK KRALLIK",
+  "BOLİVYA",
+  "BOSNA HERSEK",
+  "BOŞKORTOSTAN CUM.",
+  "BOTSVANA",
+  "BREZİLYA",
+  "BRUNEİ",
+  "BULGARİSTAN",
+  "BURKİNA FASO",
+  "BURMA",
+  "BURUNDİ",
+  "BURYATYA CUM.",
+  "BUTAN",
+  "CABO VERDE",
+  "CEZAYİR",
+  "CİBUTİ",
+  "ÇAD",
+  "ÇEÇEN CUM.",
+  "ÇEK CUMHURİYETİ",
+  "ÇİN (ÇHÇ)",
+  "ÇİN (HONG KONG)",
+  "ÇİN TAYVAN",
+  "ÇUVAŞ CUM.",
+  "DAĞISTAN CUM.",
+  "DANİMARKA",
+  "DEMOKRATİK KONGO",
+  "DOĞU TİMOR",
+  "DOMİNİK CUMHURİYETİ",
+  "DOMİNİKA",
+  "EKVATOR",
+  "EKVATOR GİNESİ",
+  "EL SALVADOR",
+  "ENDONEZYA",
+  "ERİTRE",
+  "ERMENİSTAN",
+  "ESTONYA",
+  "ETİYOPYA",
+  "FAS",
+  "FİJİ",
+  "FİLDİŞİ SAHİLİ",
+  "FİLİPİNLER",
+  "FİLİSTİN",
+  "FİNLANDİYA",
+  "FRANSA",
+  "GABON",
+  "GALLER",
+  "GAMBİYA",
+  "GANA",
+  "GİNE",
+  "GİNE-BİSSAU",
+  "GRENADA",
+  "GUATEMALA",
+  "GUYANA",
+  "GÜNEY AFRİKA",
+  "GÜNEY KIBRIS",
+  "GÜNEY KORE",
+  "GÜNEY SUDAN",
+  "GÜRCİSTAN",
+  "HAİTİ",
+  "HAKASYA CUM.",
+  "HIRVATİSTAN",
+  "HİNDİSTAN",
+  "HOLLANDA",
+  "HONDURAS",
+  "IRAK",
+  "İNGİLTERE",
+  "İNGUŞETYA CUM.",
+  "İRAN",
+  "İRLANDA",
+  "İSPANYA",
+  "İSRAİL",
+  "İSKOÇYA",
+  "İSVEÇ",
+  "İSVİÇRE",
+  "İTALYA",
+  "İZLANDA",
+  "JAMAİKA",
+  "JAPONYA",
+  "KABARTAY-BALKAR CUM.",
+  "KALMİKYA CUM.",
+  "KAMBOÇYA",
+  "KAMERUN",
+  "KANADA",
+  "KARAÇAY-ÇERKEZ CUM.",
+  "KARADAĞ",
+  "KARELYA CUM.",
+  "KATAR",
+  "KAZAKİSTAN",
+  "KENYA",
+  "KIRGIZİSTAN",
+  "KIRIM",
+  "KİRİBATİ",
+  "KOLOMBİYA",
+  "KOMİ CUM.",
+  "KOMOR",
+  "KONGO",
+  "KOSOVA",
+  "KOSTA RİKA",
+  "KUDÜS",
+  "KUVEYT",
+  "KUZEY KIBRIS",
+  "KUZEY KORE",
+  "KUZEY MAKEDONYA",
+  "KUZEY OSETYA CUM.",
+  "KÜBA",
+  "LAOS",
+  "LESOTO",
+  "LETONYA",
+  "LİBERYA",
+  "LİBYA",
+  "LİHTENŞTAYN",
+  "LİTVANYA",
+  "LÜBNAN",
+  "LÜKSEMBURG",
+  "MACARİSTAN",
+  "MADAGASKAR",
+  "MALAVİ",
+  "MALDİVLER",
+  "MALEZYA",
+  "MALİ",
+  "MALTA",
+  "MARİ EL CUM.",
+  "MARŞAL ADALARI",
+  "MAURİTİUS",
+  "MEKSİKA",
+  "MISIR",
+  "MİKRONEZYA",
+  "MOĞOLİSTAN",
+  "MOLDOVA",
+  "MONAKO",
+  "MORDOVYA CUM.",
+  "MORİTANYA",
+  "MOZAMBİK",
+  "MYANMAR",
+  "NAMİBYA",
+  "NAURU",
+  "NEPAL",
+  "NİJER",
+  "NİJERYA",
+  "NİKARAGUA",
+  "NORVEÇ",
+  "ORTA AFRİKA",
+  "ÖZBEKİSTAN",
+  "PAKİSTAN",
+  "PALAU",
+  "PANAMA",
+  "PAPUA YENİ GİNE",
+  "PARAGUAY",
+  "PERU",
+  "POLONYA",
+  "PORTEKİZ",
+  "ROMANYA",
+  "RUANDA",
+  "RUSYA",
+  "SAHA CUM. (YAKUTİSTAN)",
+  "SAİNT KİTTS VE NEVİS",
+  "SAİNT LUCİA",
+  "SAİNT VİNCENT VE GRENADİNLER",
+  "SAMOA",
+  "SAN MARİNO",
+  "SAO TOME VE PRİNCİPE",
+  "SENEGAL",
+  "SEYŞELLER",
+  "SIRBİSTAN",
+  "SİERRA LEONE",
+  "SİNGAPUR",
+  "SLOVAKYA",
+  "SLOVENYA",
+  "SOLOMON ADALARI",
+  "SOMALİ",
+  "SRİ LANKA",
+  "SUDAN",
+  "SURİNAM",
+  "SURİYE",
+  "SUUDİ ARABİSTAN",
+  "SVAZİLAND",
+  "ŞİLİ",
+  "TACİKİSTAN",
+  "TANZANYA",
+  "TATARİSTAN CUM.",
+  "TAYLAND",
+  "TOGO",
+  "TONGA",
+  "TRİNİDAD VE TOBAGO",
+  "TUNUS",
+  "TUVA CUM.",
+  "TUVALU",
+  "TÜRKİYE",
+  "TÜRKMENİSTAN",
+  "UDMURT CUM.",
+  "UGANDA",
+  "UKRAYNA",
+  "UMMAN",
+  "URUGUAY",
+  "ÜRDÜN",
+  "VANUATU",
+  "VATİKAN",
+  "VENEZUELA",
+  "VİETNAM",
+  "YEMEN",
+  "YENİ ZELANDA",
+  "YUNANİSTAN",
+  "ZAMBİYA",
+  "ZİMBABVE"
+]);
+
+// 223 Countries for Oduller (omits UK constituent entities)
+const ODULLER_COUNTRIES = Object.freeze([
+  "ADIGE CUM.",
+  "AFGANİSTAN",
+  "ALMANYA",
+  "ALTAY CUM.",
+  "AMERİKA",
+  "ANDORRA",
+  "ANGOLA CUMHURİYETİ",
+  "ANTİGUA VE BARBUDA",
+  "ARJANTİN",
+  "ARNAVUTLUK",
+  "AVUSTRALYA",
+  "AVUSTURYA",
+  "AZERBAYCAN",
+  "BAHAMALAR",
+  "BAHREYN",
+  "BANGLADEŞ",
+  "BARBADOS",
+  "BELARUS",
+  "BELÇİKA",
+  "BELİZE",
+  "BENİN",
+  "BİRLEŞİK ARAP EMİRLİKLERİ",
+  "BOLİVYA",
+  "BOSNA HERSEK",
+  "BOŞKORTOSTAN CUM.",
+  "BOTSVANA",
+  "BREZİLYA",
+  "BRUNEİ",
+  "BULGARİSTAN",
+  "BURKİNA FASO",
+  "BURMA",
+  "BURUNDİ",
+  "BURYATYA CUM.",
+  "BUTAN",
+  "CABO VERDE",
+  "CEZAYİR",
+  "CİBUTİ",
+  "ÇAD",
+  "ÇEÇEN CUM.",
+  "ÇEK CUMHURİYETİ",
+  "ÇİN (ÇHÇ)",
+  "ÇİN (HONG KONG)",
+  "ÇİN TAYVAN",
+  "ÇUVAŞ CUM.",
+  "DAĞISTAN CUM.",
+  "DANİMARKA",
+  "DEMOKRATİK KONGO",
+  "DOĞU TİMOR",
+  "DOMİNİK CUMHURİYETİ",
+  "DOMİNİKA",
+  "EKVATOR",
+  "EKVATOR GİNESİ",
+  "EL SALVADOR",
+  "ENDONEZYA",
+  "ERİTRE",
+  "ERMENİSTAN",
+  "ESTONYA",
+  "ETİYOPYA",
+  "FAS",
+  "FİJİ",
+  "FİLDİŞİ SAHİLİ",
+  "FİLİPİNLER",
+  "FİLİSTİN",
+  "FİNLANDİYA",
+  "FRANSA",
+  "GABON",
+  "GAMBİYA",
+  "GANA",
+  "GİNE",
+  "GİNE-BİSSAU",
+  "GRENADA",
+  "GUATEMALA",
+  "GUYANA",
+  "GÜNEY AFRİKA",
+  "GÜNEY KIBRIS",
+  "GÜNEY KORE",
+  "GÜNEY SUDAN",
+  "GÜRCİSTAN",
+  "HAİTİ",
+  "HAKASYA CUM.",
+  "HIRVATİSTAN",
+  "HİNDİSTAN",
+  "HOLLANDA",
+  "HONDURAS",
+  "IRAK",
+  "İNGİLTERE",
+  "İNGUŞETYA CUM.",
+  "İRAN",
+  "İRLANDA",
+  "İSPANYA",
+  "İSRAİL",
+  "İSVEÇ",
+  "İSVİÇRE",
+  "İTALYA",
+  "İZLANDA",
+  "JAMAİKA",
+  "JAPONYA",
+  "KABARTAY-BALKAR CUM.",
+  "KALMİKYA CUM.",
+  "KAMBOÇYA",
+  "KAMERUN",
+  "KANADA",
+  "KARAÇAY-ÇERKEZ CUM.",
+  "KARADAĞ",
+  "KARELYA CUM.",
+  "KATAR",
+  "KAZAKİSTAN",
+  "KENYA",
+  "KIRGIZİSTAN",
+  "KIRIM",
+  "KİRİBATİ",
+  "KOLOMBİYA",
+  "KOMİ CUM.",
+  "KOMOR",
+  "KONGO",
+  "KOSOVA",
+  "KOSTA RİKA",
+  "KUDÜS",
+  "KUVEYT",
+  "KUZEY KIBRIS",
+  "KUZEY KORE",
+  "KUZEY MAKEDONYA",
+  "KUZEY OSETYA CUM.",
+  "KÜBA",
+  "LAOS",
+  "LESOTO",
+  "LETONYA",
+  "LİBERYA",
+  "LİBYA",
+  "LİHTENŞTAYN",
+  "LİTVANYA",
+  "LÜBNAN",
+  "LÜKSEMBURG",
+  "MACARİSTAN",
+  "MADAGASKAR",
+  "MALAVİ",
+  "MALDİVLER",
+  "MALEZYA",
+  "MALİ",
+  "MALTA",
+  "MARİ EL CUM.",
+  "MARŞAL ADALARI",
+  "MAURİTİUS",
+  "MEKSİKA",
+  "MISIR",
+  "MİKRONEZYA",
+  "MOĞOLİSTAN",
+  "MOLDOVA",
+  "MONAKO",
+  "MORDOVYA CUM.",
+  "MORİTANYA",
+  "MOZAMBİK",
+  "MYANMAR",
+  "NAMİBYA",
+  "NAURU",
+  "NEPAL",
+  "NİJER",
+  "NİJERYA",
+  "NİKARAGUA",
+  "NORVEÇ",
+  "ORTA AFRİKA",
+  "ÖZBEKİSTAN",
+  "PAKİSTAN",
+  "PALAU",
+  "PANAMA",
+  "PAPUA YENİ GİNE",
+  "PARAGUAY",
+  "PERU",
+  "POLONYA",
+  "PORTEKİZ",
+  "ROMANYA",
+  "RUANDA",
+  "RUSYA",
+  "SAHA CUM. (YAKUTİSTAN)",
+  "SAİNT KİTTS VE NEVİS",
+  "SAİNT LUCİA",
+  "SAİNT VİNCENT VE GRENADİNLER",
+  "SAMOA",
+  "SAN MARİNO",
+  "SAO TOME VE PRİNCİPE",
+  "SENEGAL",
+  "SEYŞELLER",
+  "SIRBİSTAN",
+  "SİERRA LEONE",
+  "SİNGAPUR",
+  "SLOVAKYA",
+  "SLOVENYA",
+  "SOLOMON ADALARI",
+  "SOMALİ",
+  "SRİ LANKA",
+  "SUDAN",
+  "SURİNAM",
+  "SURİYE",
+  "SUUDİ ARABİSTAN",
+  "SVAZİLAND",
+  "ŞİLİ",
+  "TACİKİSTAN",
+  "TANZANYA",
+  "TATARİSTAN CUM.",
+  "TAYLAND",
+  "TOGO",
+  "TONGA",
+  "TRİNİDAD VE TOBAGO",
+  "TUNUS",
+  "TUVA CUM.",
+  "TUVALU",
+  "TÜRKİYE",
+  "TÜRKMENİSTAN",
+  "UDMURT CUM.",
+  "UGANDA",
+  "UKRAYNA",
+  "UMMAN",
+  "URUGUAY",
+  "ÜRDÜN",
+  "VANUATU",
+  "VATİKAN",
+  "VENEZUELA",
+  "VİETNAM",
+  "YEMEN",
+  "YENİ ZELANDA",
+  "YUNANİSTAN",
+  "ZAMBİYA",
+  "ZİMBABVE"
+]);
+
+// 22 Indicator Questions for SoruSeti
+const SORU_SETI_QUESTIONS = Object.freeze([
+  "Yandal Yapan Lisans Öğrenci Sayısı",
+  "İş Dünyasının, Mezunların Yeterlilikleri ile İlgili Memnuniyet Oranı",
+  "Öğretim Elemanlarının Haftalık Ders Saati Ortalaması",
+  "Kütüphanedeki Sesli Kitap v.b. Engelli Dostu Kaynak Sayısı",
+  "Engelliler için Asansör, Rampa vb. Envanter Sayısı",
+  "Erişilebilen Ders Bilgi Paketi Oranı",
+  "Kayıtlı Olunan Program Dışındaki Diğer Programlardan Alınabilen Ders Oranı",
+  "Akran Değerlendirilmesi Yapılan Program Sayısı",
+  "Dumansız Hava Sahası Oranı",
+  "Yeşil Alan Oranı",
+  "Enerji Verimliliği Yatırımı",
+  "Su Tasarrufu Yatırımı",
+  "Eğitim ve Öğretim Faaliyetleri Hedeflerinin Gerçekleşme Yüzdesi",
+  "Araştırma Faaliyetleri Hedeflerinin Gerçekleşme Yüzdesi",
+  "İdari Faaliyet Hedeflerinin Gerçekleşme Yüzdesi",
+  "Kurumun Stratejik Planında Yer Alan Toplumsal Hizmet Faaliyetleri Hedeflerinin Gerçekleşme Yüzdesi",
+  "Sıfır Atık, Yeşil Kampüs ve Çevrecilik Alanlarında Alınan Ödül Sayısı",
+  "Teknokent veya Teknoloji Transfer Ofisi (TTO) Projelerine Katılan Öğrenci Sayısı",
+  "TEKNOFEST ve TÜBİTAK Tarafından Organize Edilen Yarışmalara Katılan Öğrenci Sayısı",
+  "TEKNOFEST ve TÜBİTAK Tarafından Organize Edilen Yarışmalarda Açılan Stant Sayısı",
+  "TEKNOFEST, TÜBİTAK ve TÜBA Tarafından Organize Edilen Yarışmalarda Alınan Ödül Sayısı",
+  "TEKNOFEST ve TÜBİTAK Tarafından Organize Edilen Yarışmalara Katılan Takım Sayısı"
+]);
+
+// 106 Questions across 5 Dimensions for DijitalOlgunlukAnketi
+const DIJITAL_OLGUNLUK_QUESTIONS = Object.freeze([
+  {
+    "index": 1,
+    "dimension": "1.1 Öğrenci",
+    "question": "Dijital Okuryazarlık becerilerine yönelik faaliyetlerin yürütülmesi"
+  },
+  {
+    "index": 2,
+    "dimension": "1.1 Öğrenci",
+    "question": "Dijital ders kaynaklarına,araçlara ve ortamların kullanımını anlatan içeriklere erişim olanağı sağlanması"
+  },
+  {
+    "index": 3,
+    "dimension": "1.1 Öğrenci",
+    "question": "Öğrencilere Dijital içerik geliştirebilecekyeterliliği kazanmalarına yönelik eğitimler için e-öğrenme ortamlarının sunulması"
+  },
+  {
+    "index": 4,
+    "dimension": "1.2 Öğretim Elemanı",
+    "question": "Dijital Okuryazarlık becerilerine yönelik faaliyetlerin yürütülmesi"
+  },
+  {
+    "index": 5,
+    "dimension": "1.2 Öğretim Elemanı",
+    "question": "Dijital ders kaynaklarına,araçlara ve ortamların kullanımını anlatan içeriklere erişim olanağı sağlanması"
+  },
+  {
+    "index": 6,
+    "dimension": "1.2 Öğretim Elemanı",
+    "question": "Öğrencilere Dijital içerik geliştirebilecekyeterliliği kazanmalarına yönelik eğitimler için e-öğrenme ortamlarının sunulması"
+  },
+  {
+    "index": 7,
+    "dimension": "1.3 Yönetici",
+    "question": "Yöneticilerin dijital okuryazarlık becerilerini geliştirmeye yönelik eğitim ve etkinliklerin sağlanmasına yönelik ortamların sunulması"
+  },
+  {
+    "index": 8,
+    "dimension": "1.4 İdari Personel",
+    "question": "İdari personelin dijital okuryazarlık becerilerini geliştirmeye yönelik eğitim ve etkinliklerin sağlanmasına yönelik ortamların sunulması"
+  },
+  {
+    "index": 9,
+    "dimension": "1.4 İdari Personel",
+    "question": "İdari personelin BİT kullanım seviyelerinin ölçülmesi ve takip edilmesi"
+  },
+  {
+    "index": 10,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Hukuk Müşavirliği"
+  },
+  {
+    "index": 11,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Öğrenci İşleri"
+  },
+  {
+    "index": 12,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Sağlık,Kültür ve Spor"
+  },
+  {
+    "index": 13,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Yapı İşleri ve Teknik"
+  },
+  {
+    "index": 14,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "İdari ve Mali İşler"
+  },
+  {
+    "index": 15,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Personel İşleri"
+  },
+  {
+    "index": 16,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Strateji Geliştirme"
+  },
+  {
+    "index": 17,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Kütüphane ve Dokümantasyon"
+  },
+  {
+    "index": 18,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Basın Yayın ve Halkla İlişkiler / İletişim Koordinatörlüğü"
+  },
+  {
+    "index": 19,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Bilgi İşlem"
+  },
+  {
+    "index": 20,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Uygulama ve Araştırma Merkezleri"
+  },
+  {
+    "index": 21,
+    "dimension": "2.1 Varlık Yönetiminde Dijitalleşme",
+    "question": "Rektörlüğe Bağlı Diğer Birimler (BAP Koordinasyon Birimi, Dış İlişkiler Ofisi, Eğitim Öğretim Koordinatörlüğü vb.)"
+  },
+  {
+    "index": 22,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Hukuk Müşavirliği"
+  },
+  {
+    "index": 23,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Öğrenci İşleri"
+  },
+  {
+    "index": 24,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Sağlık,Kültür ve Spor"
+  },
+  {
+    "index": 25,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Yapı İşleri ve Teknik"
+  },
+  {
+    "index": 26,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "İdari ve Mali İşler"
+  },
+  {
+    "index": 27,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Personel İşleri"
+  },
+  {
+    "index": 28,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Strateji Geliştirme"
+  },
+  {
+    "index": 29,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Kütüphane ve Dokümantasyon"
+  },
+  {
+    "index": 30,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Basın Yayın ve Halkla İlişkiler / İletişim Koordinatörlüğü"
+  },
+  {
+    "index": 31,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Bilgi İşlem"
+  },
+  {
+    "index": 32,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Uygulama ve Araştırma Merkezleri"
+  },
+  {
+    "index": 33,
+    "dimension": "2.2 İdari Süreçlerde Dijitalleşme",
+    "question": "Rektörlüğe Bağlı Diğer Birimler (BAP Koordinasyon Birimi, Dış İlişkiler Ofisi, Eğitim Öğretim Koordinatörlüğü vb.)"
+  },
+  {
+    "index": 34,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Hukuk Müşavirliği"
+  },
+  {
+    "index": 35,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Öğrenci İşleri"
+  },
+  {
+    "index": 36,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Sağlık,Kültür ve Spor"
+  },
+  {
+    "index": 37,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Yapı İşleri ve Teknik"
+  },
+  {
+    "index": 38,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "İdari ve Mali İşler"
+  },
+  {
+    "index": 39,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Personel İşleri"
+  },
+  {
+    "index": 40,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Strateji Geliştirme"
+  },
+  {
+    "index": 41,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Kütüphane ve Dokümantasyon"
+  },
+  {
+    "index": 42,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Basın Yayın ve Halkla İlişkiler / İletişim Koordinatörlüğü"
+  },
+  {
+    "index": 43,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Bilgi İşlem"
+  },
+  {
+    "index": 44,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Uygulama ve Araştırma Merkezleri"
+  },
+  {
+    "index": 45,
+    "dimension": "2.3 Çevrimiçi Hizmet",
+    "question": "Rektörlüğe Bağlı Diğer Birimler (BAP Koordinasyon Birimi, Dış İlişkiler Ofisi, Eğitim Öğretim Koordinatörlüğü vb.)"
+  },
+  {
+    "index": 46,
+    "dimension": "3.1 İçerik ve Materyal",
+    "question": "İzlence (Syllabus),sunu,okuma parçası, video gibi ders kaynaklarının çevrimiçi ortamlarda paylaşılması"
+  },
+  {
+    "index": 47,
+    "dimension": "3.1 İçerik ve Materyal",
+    "question": "Öğretim elemanlarının dijital teknoloji kullanarak içerik ve materyal hazırlayabilmeleri"
+  },
+  {
+    "index": 48,
+    "dimension": "3.2 Yöntem ve Dijital Pedagoji",
+    "question": "Dijital ortamlarda uygun yenilikçi öğretim yaklaşımlarının kullanılması"
+  },
+  {
+    "index": 49,
+    "dimension": "3.2 Yöntem ve Dijital Pedagoji",
+    "question": "Dijital yeterlikler ve alana özgü yeniliklerin/güncellemelerin öğretim programlarına entegre edilmesi"
+  },
+  {
+    "index": 50,
+    "dimension": "3.2 Yöntem ve Dijital Pedagoji",
+    "question": "Dijital ortamlara uygun ölçme değerlendirme yöntemlerinin kullanılması"
+  },
+  {
+    "index": 51,
+    "dimension": "3.2 Yöntem ve Dijital Pedagoji",
+    "question": "Dijital eğitim ortamlarında çevrimiçi geribildirimlerin verilmesi"
+  },
+  {
+    "index": 52,
+    "dimension": "3.3 Ortam ve Araçlar",
+    "question": "Tüm dersler Öğrenci Bilgi Sistemi ve Öğrenme Yönetim Sistemi entegrasyonunun sunulması"
+  },
+  {
+    "index": 53,
+    "dimension": "3.3 Ortam ve Araçlar",
+    "question": "Sanal gerçeklik ve Artırılmış gerçeklik gibi yenilikçi yaklaşımlara dayalı simülatör,sanal lab vb. ortamların kullanılması"
+  },
+  {
+    "index": 54,
+    "dimension": "3.3 Ortam ve Araçlar",
+    "question": "Öğretim elemanlarının gerektiğinide kullanabilecekleri canlı ders ortamlarının sunulması"
+  },
+  {
+    "index": 55,
+    "dimension": "3.3 Ortam ve Araçlar",
+    "question": "Öğretim elemanlarının İHAK/MOOC dersi açma ve yayınlamasına olana veren altyapının sağlanması"
+  },
+  {
+    "index": 56,
+    "dimension": "3.3 Ortam ve Araçlar",
+    "question": "Öğretim elemanlarının eğitim, araştırma ve kişisel gelişim faaliyetlerinde ihtiyaç duydukları yapay zekâ araç ve ortamlarının sağlanması"
+  },
+  {
+    "index": 57,
+    "dimension": "3.4 Eğitimde Açıklık",
+    "question": "Öğretim elemanlarının hazırladıkları ders materyallerinin açık erişimde sunulmasına yönelik uygulamaların bulunması"
+  },
+  {
+    "index": 58,
+    "dimension": "3.4 Eğitimde Açıklık",
+    "question": "Öğrencilerin ulusal ve uluslararası İHAK/MOOC'larda (Udemy ve Coursera gibi)ders yayınlaması konusunda yönlendirme/özendirme çalışmalarının yapılması"
+  },
+  {
+    "index": 59,
+    "dimension": "3.4 Eğitimde Açıklık",
+    "question": "Öğretim elemanlarının ulusal ve uluslararası İHAK/MOOC'larda (Udemy, Coursera vb.) ders yayınlaması konusunda yönlendirme/özendirme çalışmalarının yapılması"
+  },
+  {
+    "index": 60,
+    "dimension": "3.4 Eğitimde Açıklık",
+    "question": "Diploma programları dışında sürekli eğitim faaliyetlerinin çevrimiçi ortamda gerçekleşmesi"
+  },
+  {
+    "index": 61,
+    "dimension": "3.5 Destek",
+    "question": "Yeni teknolojilerin eğitim ortamlarında kullanınıma yönelik eğitim ve bilgilendirme etkinliklerinin gerçekleşmesi"
+  },
+  {
+    "index": 62,
+    "dimension": "3.5 Destek",
+    "question": "Öğrenme-Öğretme süreçlerinde kullanılabilecek içerik geliştirme,ölçme değerlendirme ve intihal tespit gibi yazılım desteğinin sağlanması"
+  },
+  {
+    "index": 63,
+    "dimension": "3.5 Destek",
+    "question": "Engelli gruplara yönelik uygun teknolojik çözümlerin sağlanması"
+  },
+  {
+    "index": 64,
+    "dimension": "3.5 Destek",
+    "question": "Öğrenci ve öğretim elemanının malzeme,donanım,içerin,danışmanlık konularındaki anlık ihtiyaç vetaleplerin karşılanmasına yönelik mekanizmanın sunulması"
+  },
+  {
+    "index": 65,
+    "dimension": "3.5 Destek",
+    "question": "Öğrencilere yönelik idari ve akademik destekler kapsamında bilgilendirme ve yönlendirme hizmetlerinin çevrimiçi ortamda sunulması"
+  },
+  {
+    "index": 66,
+    "dimension": "4.1 Araştırmada Rehberlik ve Destek",
+    "question": "Öğretim elemanlarına yönelik araştırma süreçlerinde çevrimiçi destek/rehberlik/eğitim hizmetlerinin sağlanması"
+  },
+  {
+    "index": 67,
+    "dimension": "4.1 Araştırmada Rehberlik ve Destek",
+    "question": "Öğretim elemanlarına yönelik araştırma alanlarıyla ilgili yayınlar ve yenilikçi uygulamalar hakkında genelveya kişiye özel bildirim sağlayacak çevrimiçi mekanizmalarının sunulması"
+  },
+  {
+    "index": 68,
+    "dimension": "4.1 Araştırmada Rehberlik ve Destek",
+    "question": "Araştırmacıların,araştırma sürecinde donanım e yazılım ihtiyaçlarının giderilmesine yönelik işleyişlerinin bulunması"
+  },
+  {
+    "index": 69,
+    "dimension": "4.1 Araştırmada Rehberlik ve Destek",
+    "question": "Araştırmalar kapsamında veri toplama, analiz ve uygulama gibi farklı süreçlerde yeni teknolojilerin kullanımının desteklenmesi"
+  },
+  {
+    "index": 70,
+    "dimension": "4.2 Araştırma Süreci ve İzleme",
+    "question": "Bilimsel projelerin yönetim süreçlerinin dijital ortamda yürütülmesi ve takibin sağlanması"
+  },
+  {
+    "index": 71,
+    "dimension": "4.2 Araştırma Süreci ve İzleme",
+    "question": "Ulusal ve Uluslararsı Ar-Ge amaçlı sanal/çevrimiçi laboratuvar olanaklarının araştırma yapmak üzere öğretim elemanlarına sunulması"
+  },
+  {
+    "index": 72,
+    "dimension": "4.2 Araştırma Süreci ve İzleme",
+    "question": "Üniversitenin paydaşlarla araştırma iş birliklerinin dijital ortamda izlenmesi ve görünürlüğünün sağlanması"
+  },
+  {
+    "index": 73,
+    "dimension": "4.2 Araştırma Süreci ve İzleme",
+    "question": "Üniversite kütüphanesinin dijital yayınlarla desteklenmesi ve kampüs içi/dışı erişiminin sağlanması"
+  },
+  {
+    "index": 74,
+    "dimension": "4.3 Araştırma Sonuçlarının Paylaşılması",
+    "question": "Üniversite bünyesindeki bilimsel faaliyetlerin araştırma türü, konu, yöntem vb.parametrelere göre dijital ortamda izlenebilmesi"
+  },
+  {
+    "index": 75,
+    "dimension": "4.3 Araştırma Sonuçlarının Paylaşılması",
+    "question": "Üniversitenin kurumsal açık erişim sistemi üzerinden bünyesinde yürütülen akademik çalışmalar veya bu çalışmalara ilişkin bilgilerin etik kurallar çerçevesinde çevrimiçi olarak yayınlanması"
+  },
+  {
+    "index": 76,
+    "dimension": "4.3 Araştırma Sonuçlarının Paylaşılması",
+    "question": "Bilimsel çalışma sonuçlarının topluma fayda sağlayacak şekilde dijital platformlar yardımıyla paylaşılması"
+  },
+  {
+    "index": 77,
+    "dimension": "4.3 Araştırma Sonuçlarının Paylaşılması",
+    "question": "Fikri mülkiyet, faydalı model ve patent vb. başvuru süreçlerinin çevrimiçi ortamda yürürülmesi, izlenmesi ve sonuçların paylaşılması"
+  },
+  {
+    "index": 78,
+    "dimension": "4.3 Araştırma Sonuçlarının Paylaşılması",
+    "question": "Paydaşlarla birlikte çevrimiçi araştırma iş birliklerinin duyurulması,planlanması, izlemesi ve paylaşılması süreçlerinin dijital ortamda gerçekleştirilmesi"
+  },
+  {
+    "index": 79,
+    "dimension": "5.1 Etkili İletişim ve Entegrasyon",
+    "question": "Kurumda öğretim elemanı ve öğrenciler için destek/ileişim noktalarının oluşturulması"
+  },
+  {
+    "index": 80,
+    "dimension": "5.1 Etkili İletişim ve Entegrasyon",
+    "question": "Kullanılan teknolojilerin/yazılımların birbiriyle uyumlu ve etkileşimli bir şekilde konuşabilmesi"
+  },
+  {
+    "index": 81,
+    "dimension": "5.2 Yenilikçilik",
+    "question": "Yeni teknoloji seçimi konusunda birimlere yönlendirme/mentörlük yapılması"
+  },
+  {
+    "index": 82,
+    "dimension": "5.2 Yenilikçilik",
+    "question": "Üniversite yönetim süreçlerinde yenilikçi teknolojilerin takip edilmesi ve bunlara açık olunması"
+  },
+  {
+    "index": 83,
+    "dimension": "5.2 Yenilikçilik",
+    "question": "Üniversite öğretim süreçlerinde yenilikçi teknolojilerin (etkileşimli tahta, PC, Nesnelerin interneti destekli sınıf ortamı, kartlı kapı sistemi, internet bağlantısı vb.) takip edilmesi ve bunlara açık olunması"
+  },
+  {
+    "index": 84,
+    "dimension": "5.3 Sürdürülebilirlik ve Açık Erişim",
+    "question": "Üniversite bünyesindeki yazılımların sürekli iyileştirilmesi ve entegrasyonu için sürdürülebilir ortak bir mimari ve dokümantasyonun oluşturulması"
+  },
+  {
+    "index": 85,
+    "dimension": "5.3 Sürdürülebilirlik ve Açık Erişim",
+    "question": "Yazılım ve donanımların iyileştirilmesi ve sürdürülebilirliği için teknik kontrol, bakım ve güncelleme mekanizmalarının bulunması"
+  },
+  {
+    "index": 86,
+    "dimension": "5.3 Sürdürülebilirlik ve Açık Erişim",
+    "question": "Sürdürülebilirlik açısından nitelikli insan kaynağının sağlanması ve korunmasına yönelik uygulamaların bulunması"
+  },
+  {
+    "index": 87,
+    "dimension": "5.3 Sürdürülebilirlik ve Açık Erişim",
+    "question": "Sürdürülebilir kampüs uygulamalarının gerçekleştirilmesi"
+  },
+  {
+    "index": 88,
+    "dimension": "5.3 Sürdürülebilirlik ve Açık Erişim",
+    "question": "Dijital hizmetlerin kesintisiz sürdürülebilirliğini sağlayacak yazılım veya donanım çözümlerinin bulunması"
+  },
+  {
+    "index": 89,
+    "dimension": "5.3 Sürdürülebilirlik ve Açık Erişim",
+    "question": "Ulusal Akademik Arşivlere bütünleşik bir açık arşiv sisteminin bulunması"
+  },
+  {
+    "index": 90,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Üniversitenin paydaşlara sunduğu yazılımların kampüs içi ve kampüs dışı erişiminin sağlanması"
+  },
+  {
+    "index": 91,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Öğretimsel amaçlı kullanılmak üzere öğretim elemanları ve öğrencilere ödünç olara kısa süreli teknolojik kaynak teminin sağlanması"
+  },
+  {
+    "index": 92,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Derslerde kullanılan yazılımların öğretim elemanı ve öğrencilerin kişisel kullanımı için üniversite tarafından lisanslanması"
+  },
+  {
+    "index": 93,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Tüm kampüste internet erişim desteğinin sağlanması"
+  },
+  {
+    "index": 94,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Engellilere yönelik kampüs yaşamını ve öğrenme süreçlerini kolaylaştıracak sistemlerin bulunması"
+  },
+  {
+    "index": 95,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Web sitelerinin ve sosyal medya hesaplarının kullanıcı dostu, kullanılabilir, farklı dil desteği ve engen durumlarına uygun, mobil destekli ve sürekli güncellenip kurumsal görünürlüğü sağlıyor olması"
+  },
+  {
+    "index": 96,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Öncelikli alanlarda (yapay zeka, sanal gerçeklik, robotik v.b.) ilgili eğitim ve araştırmalarda gerekli ortamların sağlanması"
+  },
+  {
+    "index": 97,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Dijital veri tabanlarıyla dijital kaynaklara aboneliklerin bulunması ve bunlara tek çatı altından erişebilmesi"
+  },
+  {
+    "index": 98,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Üniversite öğretim faaliyetlerinin yürütülmesi için ÖYS ile Canlı Ders Sistemleri altyapısının sağlanması"
+  },
+  {
+    "index": 99,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Üniversitede dijital kampüs uygulamalarının bulunması"
+  },
+  {
+    "index": 100,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Üniversitede dijital hizmelerin sunulması"
+  },
+  {
+    "index": 101,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Kullanılan yazılım ve sistem ara yüzlerinde ortak bir tasarım dilinin kullanılması/ Dijital Standartizasyon sağlanması"
+  },
+  {
+    "index": 102,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Güvenlik tehditlerini etkili bir şekilde algılayan, yanıtlayan ve önleyen risk tabanlı bir güvenlik stratejisinin olması"
+  },
+  {
+    "index": 103,
+    "dimension": "5.4 Donanım ve Yazılım Erişebilirlik",
+    "question": "Kampüs içi yaşam alanlarında öğrencilerin internet, yazıcı v.b. Teknolojilere erişim olanağının sunulması"
+  },
+  {
+    "index": 104,
+    "dimension": "5.5 Kalite Yönetim Sistemi (KYS)",
+    "question": "Kalite Yönetim Sisteminin Kurulması"
+  },
+  {
+    "index": 105,
+    "dimension": "5.5 Kalite Yönetim Sistemi (KYS)",
+    "question": "Kalite Yönetim Sistemine İç Paydaşların Erişebilmesi"
+  },
+  {
+    "index": 106,
+    "dimension": "5.5 Kalite Yönetim Sistemi (KYS)",
+    "question": "Kalite Yönetim Sistemine Dış Paydaşların Erişebilmesi"
+  }
+]);
+
+// 27 Sectors for MYOUygulamaliEgitim (listeler!E2:E28)
+const MYO_SECTORS_27 = Object.freeze([
+  'Adalet ve Güvenlik',
+  'Ağaç İşleri, Kağıt ve Kağıt Ürünleri',
+  'Bilişim Teknolojileri',
+  'Cam, Çimento ve Toprak',
+  'Çevre',
+  'Eğitim',
+  'Elektrik ve Elektronik',
+  'Enerji',
+  'Finans',
+  'Gıda',
+  'İnşaat',
+  'İş ve Yönetim',
+  'Kimya, Petrol, Lastik ve Plastik',
+  'Kültür, Sanat ve Tasarım',
+  'Maden',
+  'Makine',
+  'Medya, İletişim ve Yayıncılık',
+  'Metal',
+  'Otomotiv',
+  'Sağlık ve Sosyal Hizmetler',
+  'Spor ve Rekreasyon',
+  'Tarım, Avcılık ve Balıkçılık',
+  'Tekstil, Hazır Giyim, Deri',
+  'Ticaret (Satış ve Pazarlama)',
+  'Toplumsal ve Kişisel Hizmetler',
+  'Turizm, Konaklama, Yiyecek-İçecek Hizmetleri',
+  'Ulaştırma, Lojistik ve Haberleşme'
+]);
+
+// 8 Themes for Projeler (Referans Değerler!$G$8:$G$15)
+const PROJELER_THEMES_8 = Object.freeze([
+  'Yapay Zeka',
+  'Savunma Sanayi',
+  'Sürdürülebilirlik',
+  'Toplumsal Fayda',
+  'Afet Yönetimi',
+  'Erişilebilirlik',
+  'Enerji-Su-Atık',
+  'Diğer'
+]);
+
+// 4 Partners for Projeler (Referans Değerler!$H$8:$H$11)
+const PROJELER_PARTNERS_4 = Object.freeze([
+  'Kamu',
+  'Sanayi',
+  'STK',
+  'Üniversite'
+]);
+
+// 18 Themes for Bologna Dersler
+const DERSLER_THEMES_18 = Object.freeze([
+  'Biyoteknoloji ve Genetik',
+  'Çevre ve İklim Değişikliği',
+  'Enerji Teknolojileri',
+  'Havacılık ve Uzay',
+  'İleri Malzeme ve Nanoteknoloji',
+  'Kültürel Miras ve Sanat',
+  'Medya ve İletişim',
+  'Sağlık ve Yaşam Bilimleri',
+  'Siber Güvenlik',
+  'Sosyal Politikalar ve Toplumsal Cinsiyet',
+  'Tarım ve Gıda Teknolojileri',
+  'Toplumsal Gelişim ve Sosyal İnovasyon',
+  'Ulaştırma ve Akıllı Şehirler',
+  'Veri Bilimi',
+  'Yapay Zeka',
+  'Yenilenebilir Enerji',
+  'Ziraat',
+  'Diğer'
+]);
+
+// Dijital Olgunluk Dropdown Lookups
+const DIJITAL_APPROVAL_ROLES = Object.freeze([
+  'İlgili Veri Sahibi',
+  'Memur',
+  'Müdür-Şef',
+  'Daire Başkanı',
+  'Genel Sekreter'
+]);
+
+const DIJITAL_ACCESS_TYPES = Object.freeze([
+  'İnternet',
+  'Yerleşke İçi',
+  'Belirli Binalar',
+  'Sadece Bilgisayar',
+  'Ağ Dışı Ortam'
+]);
+
+const DIJITAL_ACCESS_LEVELS = Object.freeze([
+  'Sadece Yetkililer',
+  'Bazı Modüllere Sadece Yetkililer',
+  'Kullanıcı Adı Alan Herkes',
+  'Anonim Herkes'
+]);
+
+const DIJITAL_MATURITY_LEVELS = Object.freeze([
+  'Farkındalık',
+  'Kısmi Uygulamalar',
+  'Stratejik Uygulamalar',
+  'Bütünleşik Uygulamalar',
+  'Kültüre Dönüşme'
+]);
+
+module.exports = {
+  HAREKETLILIK_COUNTRIES,
+  ODULLER_COUNTRIES,
+  SORU_SETI_QUESTIONS,
+  DIJITAL_OLGUNLUK_QUESTIONS,
+  MYO_SECTORS_27,
+  PROJELER_THEMES_8,
+  PROJELER_PARTNERS_4,
+  DERSLER_THEMES_18,
+  DIJITAL_APPROVAL_ROLES,
+  DIJITAL_ACCESS_TYPES,
+  DIJITAL_ACCESS_LEVELS,
+  DIJITAL_MATURITY_LEVELS
+};

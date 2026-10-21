@@ -1,0 +1,71 @@
+services:
+  mongodb:
+    image: mongo:7
+    container_name: ostim_strateji_mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    healthcheck:
+      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - ostim-strateji-net
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: ostim_strateji_backend
+    restart: unless-stopped
+    ports:
+      - "5000:5000"
+    depends_on:
+      mongodb:
+        condition: service_healthy
+    environment:
+      NODE_ENV: production
+      PORT: 5000
+      MONGO_URI: mongodb://mongodb:27017/ostim_strateji_db
+      MONGODB_URI: mongodb://mongodb:27017/ostim_strateji_db
+      JWT_SECRET: ostim-teknik-universitesi-strateji-portal-jwt-secret-2026
+      JWT_EXPIRES_IN: 24h
+      ALLOWED_ORIGINS: "*"
+      YOK_TEMPLATES_DIR: "/app/2025-2026 yök izleme şablonlar"
+    volumes:
+      - "./2025-2026 yök izleme şablonlar:/app/2025-2026 yök izleme şablonlar:ro"
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:5000/health"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+      start_period: 15s
+    networks:
+      - ostim-strateji-net
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_APP_API_URL: ""
+    container_name: ostim_strateji_frontend
+    restart: unless-stopped
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - ostim-strateji-net
+
+volumes:
+  mongo-data:
+    driver: local
+
+networks:
+  ostim-strateji-net:
+    driver: bridge

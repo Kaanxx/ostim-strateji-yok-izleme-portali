@@ -1,0 +1,17 @@
+{
+  "name": "ostim-strateji-ve-yok-izleme-portali",
+  "version": "1.0.0",
+  "description": "OSTİM Teknik Üniversitesi Veri İzleme ve Değerlendirme Birimi — Strateji ve YÖK İzleme Portalı",
+  "private": true,
+  "scripts": {
+    "setup": "cd backend && npm install && cd ../frontend && npm install && npm run build",
+    "setup:quick": "cd backend && npm install",
+    "start": "node start-all.js",
+    "seed": "cd backend && npm run seed",
+    "test": "cd backend && npm test && node ../tests/runner.js",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down"
+  },
+  "author": "OSTİM Teknik Üniversitesi Veri İzleme ve Değerlendirme Birimi",
+  "license": "ISC"
+}

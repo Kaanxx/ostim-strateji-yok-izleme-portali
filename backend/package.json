@@ -1,0 +1,41 @@
+{
+  "name": "ostim-strateji-backend",
+  "version": "1.0.0",
+  "description": "OSTİM Teknik Üniversitesi Strateji ve YÖK İzleme Portalı Backend Engine",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "seed": "node seeds/seedRunner.js",
+    "test": "node --test --test-concurrency=1 tests/auth.test.js tests/rbac.test.js tests/dynamicBuilder.test.js tests/workflow.test.js tests/templateEngine.test.js tests/excelService.test.js tests/persistenceAndUsability.test.js"
+  },
+  "keywords": [
+    "ostim",
+    "yok",
+    "izleme",
+    "portal",
+    "express5",
+    "mongoose"
+  ],
+  "author": "OSTİM Teknik Üniversitesi Veri İzleme Birimi",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "exceljs": "^4.4.0",
+    "express": "^5.0.0",
+    "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb-memory-server": "^10.1.4",
+    "mongoose": "^9.2.2",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "supertest": "^7.0.0"
+  }
+}
